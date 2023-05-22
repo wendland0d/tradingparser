@@ -1,0 +1,2 @@
+# tradingparser
+The Giant Ecosystem
