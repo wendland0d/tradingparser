@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   db:
+    container_name: parser_db
     image: postgres:latest
     restart: always
     environment:
@@ -9,4 +10,6 @@ services:
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=parsers
     volumes:
-      - .:/postgres
+      - ./db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
